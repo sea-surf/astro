@@ -1,0 +1,11 @@
+[project]
+name = "astro-crawler"
+version = "0.1.0"
+description = "AstroBin Full-Resolution Image Crawler and Downloader"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.0",
+    "rich>=13.0.0",
+    "pillow>=10.0.0",
+]
