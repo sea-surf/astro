@@ -9,6 +9,8 @@ Image crawler to download full-resolution astrophotography images from any user 
 
 [`@jhayes_tucson`](https://app.astrobin.com/u/jhayes_tucson#gallery) [`@CAPastrophotography`](https://app.astrobin.com/u/CAPastrophotography#gallery) 
 
+API: https://welcome.astrobin.com/application-programming-interface
+
 ---
 
 ## Desktop GUI
