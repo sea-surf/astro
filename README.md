@@ -1,9 +1,9 @@
 # AstroBin Image Crawler
 
-A multithreaded Python crawler designed to recursively download full-resolution astrophotography images from any user profile or gallery on [AstroBin](https://app.astrobin.com).
+Image crawler to download full-resolution astrophotography images from any user profile or gallery on [AstroBin](https://app.astrobin.com).
 
-![Cracking the Dragon's Egg (NGC 6164)](assets/cracking_the_dragons_egg.jpg)
-*Sample full-resolution image crawled: "Cracking the Dragon's Egg (NGC 6164)" by John Hayes (3320 × 3320 px, 5.89 MB)*
+![Gem Cluster (NGC 3293)](assets/ngc_3293_gem_cluster.jpg)
+*"Gem Cluster" by Capturing Ancient Photons*
 
 ---
 
@@ -23,88 +23,30 @@ A multithreaded Python crawler designed to recursively download full-resolution 
 
 ![Terminal](assets/terminal.png)
 
-### 1. Crawl Any User Profile
-Point the crawler to any user's profile URL or username to download their complete gallery:
+### Run
 
 ```bash
-# Using a profile URL
+# profile URL
 uv run python main.py https://app.astrobin.com/u/jhayes_tucson
 
-# Using a classic AstroBin URL
+# AstroBin URL
 uv run python main.py https://www.astrobin.com/users/jhayes_tucson/
 
-# Or using just the username
+# username
 uv run python main.py jhayes_tucson
-```
 
-### 2. High-Speed Concurrent Crawling
-Speed up large galleries with multiple worker threads:
-
-```bash
 uv run python main.py https://app.astrobin.com/u/jhayes_tucson --workers 8
-```
 
-### 3. Test Crawling with a Limit
-Download only the first $N$ images from a profile:
-
-```bash
 uv run python main.py https://app.astrobin.com/u/jhayes_tucson --limit 5
-```
 
-### 4. Download a Single Image
-Download a single image by passing its gallery link, direct URL, or hash:
-
-```bash
-# Link copied from profile gallery view
-uv run python main.py "https://app.astrobin.com/u/jhayes_tucson?i=j7a388"
-
-# Direct image page
-uv run python main.py https://app.astrobin.com/i/j7a388
-
-# Direct hash
-uv run python main.py j7a388
-```
-
-### 5. Crawl Full Gallery from an Image Link
-If you found an image link and want to grab the author's entire gallery:
-
-```bash
 uv run python main.py "https://app.astrobin.com/u/jhayes_tucson?i=j7a388" --gallery
-```
 
-### 6. Include All Revisions & Export Metadata
-Download all uploaded revisions (A, B, C...) and save full technical equipment metadata:
-
-```bash
 uv run python main.py https://app.astrobin.com/u/jhayes_tucson --include-revisions --save-metadata
 ```
 
 ---
 
-## Installation
-
-This project is configured for [`uv`](https://github.com/astral-sh/uv), but standard `pip` can also be used.
-
-### With `uv` (Recommended)
-```bash
-# Run directly (uv automatically manages the environment and dependencies)
-uv run python main.py <target>
-```
-
-### With `pip`
-```bash
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# Linux/macOS:
-source .venv/bin/activate
-
-pip install -r requirements.txt
-```
-
----
-
-## CLI Options
+## CLI
 
 | Flag | Long Option | Description | Default |
 |---|---|---|---|
