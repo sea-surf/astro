@@ -9,6 +9,19 @@ output/
 *.part
 *.tmp
 
+# Compiled binaries & libraries
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
 # Python bytecode & cache
 __pycache__/
 *.py[cod]

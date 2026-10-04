@@ -1,6 +1,6 @@
-# AstroBin Image Crawler 🌌
+# AstroBin Image Crawler
 
-A fast, multithreaded Python crawler and downloader designed to recursively download **full-resolution** master astrophotography images from **any user profile or gallery** on [AstroBin](https://app.astrobin.com).
+A multithreaded Python crawler designed to recursively download full-resolution astrophotography images from any user profile or gallery on [AstroBin](https://app.astrobin.com).
 
 ![Cracking the Dragon's Egg (NGC 6164)](assets/cracking_the_dragons_egg.jpg)
 *Sample full-resolution image crawled: "Cracking the Dragon's Egg (NGC 6164)" by John Hayes (3320 × 3320 px, 5.89 MB)*
@@ -11,30 +11,17 @@ A fast, multithreaded Python crawler and downloader designed to recursively down
 
 ---
 
-## Installation
+## Desktop GUI
 
-This project is configured for [`uv`](https://github.com/astral-sh/uv), but standard `pip` can also be used.
+![GUI](assets/gui.png)
 
-### With `uv` (Recommended)
-```bash
-# Run directly (uv automatically manages the environment and dependencies)
-uv run python main.py <target>
-```
-
-### With `pip`
-```bash
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# Linux/macOS:
-source .venv/bin/activate
-
-pip install -r requirements.txt
-```
+[Download](https://github.com/sea-surf/astro/releases/)
 
 ---
 
-## Usage
+## Terminal
+
+![Terminal](assets/terminal.png)
 
 ### 1. Crawl Any User Profile
 Point the crawler to any user's profile URL or username to download their complete gallery:
@@ -94,11 +81,34 @@ uv run python main.py https://app.astrobin.com/u/jhayes_tucson --include-revisio
 
 ---
 
-## CLI Options Reference
+## Installation
+
+This project is configured for [`uv`](https://github.com/astral-sh/uv), but standard `pip` can also be used.
+
+### With `uv` (Recommended)
+```bash
+# Run directly (uv automatically manages the environment and dependencies)
+uv run python main.py <target>
+```
+
+### With `pip`
+```bash
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+---
+
+## CLI Options
 
 | Flag | Long Option | Description | Default |
 |---|---|---|---|
-| `target` | (positional) | AstroBin profile URL, image URL, username, or hash | `jhayes_tucson` |
+| `target` | | AstroBin profile URL, image URL, username, or hash | `jhayes_tucson` |
 | `-o` | `--output-dir` | Directory where downloaded images are saved | `imgs/` |
 | `-w` | `--workers` | Number of concurrent download worker threads | `4` |
 | `-l` | `--limit` | Maximum number of images to download from a gallery | Unlimited |
@@ -108,4 +118,3 @@ uv run python main.py https://app.astrobin.com/u/jhayes_tucson --include-revisio
 | `-g` | `--gallery` | Force gallery crawling even if given a `?i=` image link | `False` |
 | | `--overwrite` | Overwrite existing files instead of resuming/skipping | `False` |
 
----

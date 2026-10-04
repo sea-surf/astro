@@ -1,0 +1,54 @@
+# Build Folders
+build/
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.dir/
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.log
+Debug/
+Release/
+x64/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install/
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
+# Dependencies
+dependencies/imgui/docs/
+dependencies/imgui/examples/
+dependencies/imgui/misc/
+dependencies/GLFW/docs/
+dependencies/GLFW/examples/
+dependencies/GLFW/tests/
+dependencies/glm/test/
+dependencies/glm/doc/
+
+# Executables & Binaries
+*.exe
+*.dll
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini
